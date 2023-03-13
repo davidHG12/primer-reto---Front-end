@@ -3,8 +3,8 @@ import Task from '../Task'
 import './TaskContainer.css'
 import axios from 'axios';
 
-const URI = 'https://q4soyrvvra.execute-api.us-east-1.amazonaws.com/api/tarea';
-const URI2 = 'https://q4soyrvvra.execute-api.us-east-1.amazonaws.com/api/tareas';
+const URI = 'https://1twk8kaz1m.execute-api.us-east-1.amazonaws.com/api/tarea';
+const URI2 = 'https://1twk8kaz1m.execute-api.us-east-1.amazonaws.com/api/tareas';
 
 const TaskContainer = ({ tareas, setTareas, dark }) => {
 
@@ -47,7 +47,7 @@ const TaskContainer = ({ tareas, setTareas, dark }) => {
 
             <div className={`${dark ? 'darkMode-box-tasks-container' : "lightMode-box-tasks-container"} box-tasks-container`}>
                 {tareas.tareas?.map((tarea) => {
-                    return <Task tarea={tarea} tareas={tareas} setTareas={setTareas} dark={dark} key={tarea.titulo}/>
+                    return <Task tarea={tarea} tareas={tareas} setTareas={setTareas} index={tarea.titulo} dark={dark} key={tarea.titulo}/>
                 })}
             </div>
         </div>

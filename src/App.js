@@ -5,7 +5,8 @@ import { BsSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
 import TaskContainer from './Components/TaskContainer';
 import axios from 'axios';
 
-const URI = 'https://q4soyrvvra.execute-api.us-east-1.amazonaws.com/api/tareas';
+export const URI = 'https://1twk8kaz1m.execute-api.us-east-1.amazonaws.com/api/tareas';
+export const URI2 = 'https://1twk8kaz1m.execute-api.us-east-1.amazonaws.com/api/tareas';
 
 function App() {
 
@@ -20,7 +21,6 @@ function App() {
 
   const getTareas = async () => {
     const res = await axios.get(URI);
-    console.log(res.data)
     setTareas(res.data);
   };
   
